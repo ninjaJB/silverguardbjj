@@ -5,7 +5,7 @@
 var FACEBOOK_URL = 'https://www.facebook.com/groups/1140814578388183';
 // TODO: replace with the real address that should receive signup requests
 // (or swap the signup form for a real email-list provider later).
-var SIGNUP_EMAIL = 'hello@example.com';
+var SIGNUP_EMAIL = 'hello@silverguardbjj.com';
 var INSTAGRAM_URL = 'https://instagram.com/silverguardbjj';
 var X_URL = 'https://x.com/silverguardbjj';
 
