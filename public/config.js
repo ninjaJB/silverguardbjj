@@ -2,7 +2,7 @@
    SITE CONFIG — the ONE place to edit placeholder links.
    ============================================================ */
 // TODO: replace '#' with the real Facebook group URL.
-var FACEBOOK_URL = '#';
+var FACEBOOK_URL = 'https://www.facebook.com/groups/1140814578388183';
 // TODO: replace with the real address that should receive signup requests
 // (or swap the signup form for a real email-list provider later).
 var SIGNUP_EMAIL = 'hello@example.com';
