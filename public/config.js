@@ -26,10 +26,12 @@ var X_URL = 'https://x.com/silverguardbjj';
       var email = form.email.value.trim();
       var msg = document.getElementById('signup-msg');
       if (!form.checkValidity()) { form.reportValidity(); return; }
-      // TODO: no backend yet — opens the visitor's mail app addressed to SIGNUP_EMAIL.
-      window.location.href = 'mailto:' + SIGNUP_EMAIL +
-        '?subject=' + encodeURIComponent('Silver Guard: keep me in the loop') +
-        '&body=' + encodeURIComponent('Please add ' + email + ' to the Silver Guard updates list.');
+      var fd = new FormData();
+      fd.append('entry.1140105683', email);
+      fetch('https://docs.google.com/forms/d/e/1FAIpQLSfVfklxzyC9oCRT5dhzeky2o3-eDEUXVjrGNwcgXq_y4YeVyw/formResponse', { method: 'POST', mode: 'no-cors', body: fd })
+        .then(function () { msg.textContent = "You're on the list. Welcome to the guard."; form.reset(); })
+        .catch(function () { msg.textContent = 'Something went wrong. Email hello@silverguardbjj.com instead.'; });
+      return;
       msg.textContent = 'Thanks! Your email app should open to finish signing up.';
     });
   }
